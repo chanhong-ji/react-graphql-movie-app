@@ -15,12 +15,18 @@ const GET_MOVIES = gql`
   }
 `;
 
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 const Loader = styled.h2``;
 
 function Home() {
   const { loading, data } = useQuery(GET_MOVIES);
   return (
-    <div>
+    <Container>
       {loading ? (
         <Loader>Loading...</Loader>
       ) : (
@@ -34,7 +40,7 @@ function Home() {
         ))
       )}
       <Outlet />
-    </div>
+    </Container>
   );
 }
 

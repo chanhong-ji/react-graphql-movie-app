@@ -26,23 +26,23 @@ function Detail() {
 
   return (
     <div>
-      {loading ? (
+      {/* {loading ? (
         <>
           <h1>{title}</h1>
           <h1>loading...</h1>
         </>
       ) : (
         <div>
-          {/* <h5>{data.Movie.title}</h5> */}
-          {/* <h5>{data.Movie.id}</h5>
+          <h5>{data.Movie.title}</h5>
+          <h5>{data.Movie.id}</h5>
           <h5>{data.Movie.description_intro}</h5>
-          <h5>{data.Movie.medium_cover_image}</h5> */}
+          <h5>{data.Movie.medium_cover_image}</h5>
           <h2>Suggestions</h2>
-          {data.Suggestions.map((movie) => (
-            <h5>{movie.title}</h5>
+          {data.Suggestions.map((movie, index) => (
+            <h5 key={index}>{movie.title}</h5>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 }
