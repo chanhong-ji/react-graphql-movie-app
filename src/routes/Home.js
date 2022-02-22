@@ -11,6 +11,7 @@ const GET_MOVIES = gql`
       id
       title
       medium_cover_image
+      isLiked @client
     }
   }
 `;
@@ -36,6 +37,7 @@ function Home() {
             cover={movie.medium_cover_image}
             id={movie.id}
             title={movie.title}
+            isLiked={movie.isLiked}
           />
         ))
       )}
