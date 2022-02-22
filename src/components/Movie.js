@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Movie({ cover, id, title }) {
   return (
     <>
-      <Link to={`/${id}`}>
+      <Link to={`/${id}`} state={title}>
         <img src={cover} alt="" />
         <h2>{title}</h2>
       </Link>
